@@ -53,14 +53,14 @@
     <!-- JavaScript to fetch data from Google Sheets -->
     <script>
         // --- 🔴 STEP 1: วาง URL ของ Google Sheet .csv ที่คัดลอกมาไว้ที่นี่ ---
-        const googleSheetCsvUrl = 'YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL_HERE';
+        const googleSheetCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSc3kvVEkU5fEAJUymr314hF49RjIUck8_Y2iidnpUkhY3jxZmBE633BZBWcuceoppqVFk-YAjGnTvy/pubhtml?gid=500690456&single=true';
 
         // Function to load and display links from the sheet
         async function loadLinks() {
             const linksContainer = document.getElementById('links-container');
             
             // ตรวจสอบว่าผู้ใช้ใส่ URL แล้วหรือยัง
-            if (googleSheetCsvUrl === 'YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL_HERE') {
+            if (googleSheetCsvUrl === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSc3kvVEkU5fEAJUymr314hF49RjIUck8_Y2iidnpUkhY3jxZmBE633BZBWcuceoppqVFk-YAjGnTvy/pubhtml?gid=500690456&single=true') {
                 linksContainer.innerHTML = '<p class="text-white/80 text-center bg-red-800/50 p-3 rounded-lg">กรุณาใส่ URL ของ Google Sheet ในโค้ดก่อน</p>';
                 return;
             }
