@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ตัวอย่างหน้าเว็บรวมลิงก์ (Dynamic)</title>
+    <title>@dssd.wu - Links</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Kanit) -->
@@ -11,7 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kanit', sans-serif; }
+        /* ใช้ฟอนต์ Kanit กับทุกส่วนของเว็บ */
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        /* เอฟเฟกต์ตอนเอาเมาส์ชี้ปุ่ม */
         .hover-lift {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
@@ -21,91 +25,65 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400">
+<body class="bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300">
 
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
 
-        <!-- Profile Section -->
+        <!-- ส่วนโปรไฟล์ -->
         <div class="w-full max-w-md text-center">
+            <!-- โลโก้ -->
             <img 
-                src="https://placehold.co/120x120/FFFFFF/333333?text=Profile" 
-                alt="รูปโปรไฟล์" 
-                class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto border-4 border-white shadow-lg"
+                src="https://dssd.wu.ac.th/wp-content/uploads/2025/07/474646448_122166056066301431_8332883749110873460_n.jpg" 
+                alt="โลโก้ส่วนส่งเสริมและพัฒนานักศึกษา" 
+                class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto border-4 border-white shadow-lg object-cover"
+                onerror="this.onerror=null;this.src='https://placehold.co/120x120/FFFFFF/333333?text=Logo';"
             >
-            <h1 class="text-2xl md:text-3xl font-bold text-white mt-4">@ชื่อของคุณ</h1>
-            <p class="text-white/90 mt-2 mb-8 text-base md:text-lg">
-                ยินดีต้อนรับ! รวมทุกช่องทางการติดต่อไว้ที่นี่แล้ว ✨
-            </p>
+            
+            <!-- ชื่อโปรไฟล์ -->
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mt-4 mb-8">
+                @dssd.wu
+            </h1>
         </div>
 
-        <!-- Links Section: This container will be filled by JavaScript -->
-        <div id="links-container" class="w-full max-w-md">
-            <p class="text-white/80 text-center">กำลังโหลดลิงก์...</p>
+        <!-- ส่วนของลิงก์ -->
+        <div class="w-full max-w-md">
+            
+            <a href="https://dssd.wu.ac.th/" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                🌐 เว็บไซต์ส่วนส่งเสริมและพัฒนานักศึกษา
+            </a>
+            
+            <a href="https://dssd.wu.ac.th/?p=221357" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                🚗 ขึ้นทะเบียนยานพาหนะ
+            </a>
+
+            <a href="https://dssdwu.github.io/lostandfound/" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                🔍 ของหายได้คืน
+            </a>
+
+            <a href="https://forms.gle/t7bKx6fHqwMeyGzC8" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                📦 แจ้งพบสิ่งของ
+            </a>
+
+            <a href="https://forms.gle/hhVp1gmkQPnuBYQx5" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                🗓️ จองห้องประชุมอาคารติวเตอร์
+            </a>
+
+            <a href="https://www.facebook.com/groups/wu.volunteer.center" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                ❤️ ศูนย์จิตอาสา มวล.
+            </a>
+
+            <a href="https://www.facebook.com/groups/442671105761880" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 rounded-lg text-center shadow-md hover-lift">
+                🎓 กลุ่ม กยศ.วลัยลักษณ์
+            </a>
+
         </div>
 
-        <!-- Footer -->
+        <!-- ส่วนท้าย -->
         <footer class="mt-12 text-center">
-            <p class="text-white/70 text-sm">สร้างสรรค์ด้วย HTML & Google Sheets</p>
+            <p class="text-gray-700/80 text-sm font-semibold">Caring & Support Your Success</p>
         </footer>
 
     </div>
-
-    <!-- JavaScript to fetch data from Google Sheets -->
-    <script>
-        // --- 🔴 STEP 1: วาง URL ของ Google Sheet .csv ที่คัดลอกมาไว้ที่นี่ ---
-        const googleSheetCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSc3kvVEkU5fEAJUymr314hF49RjIUck8_Y2iidnpUkhY3jxZmBE633BZBWcuceoppqVFk-YAjGnTvy/pubhtml?gid=500690456&single=true';
-
-        // Function to load and display links from the sheet
-        async function loadLinks() {
-            const linksContainer = document.getElementById('links-container');
-            
-            // ตรวจสอบว่าผู้ใช้ใส่ URL แล้วหรือยัง
-            if (googleSheetCsvUrl === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSc3kvVEkU5fEAJUymr314hF49RjIUck8_Y2iidnpUkhY3jxZmBE633BZBWcuceoppqVFk-YAjGnTvy/pubhtml?gid=500690456&single=true') {
-                linksContainer.innerHTML = '<p class="text-white/80 text-center bg-red-800/50 p-3 rounded-lg">กรุณาใส่ URL ของ Google Sheet ในโค้ดก่อน</p>';
-                return;
-            }
-
-            try {
-                const response = await fetch(googleSheetCsvUrl);
-                if (!response.ok) throw new Error('ไม่สามารถโหลดข้อมูลได้');
-                
-                const csvText = await response.text();
-                
-                // Clear loading message
-                linksContainer.innerHTML = ''; 
-
-                // Parse CSV data, skip header row (slice(1))
-                const rows = csvText.trim().split('\n').slice(1);
-
-                rows.forEach(row => {
-                    // Split row by comma. Note: This simple split won't work if your title has commas.
-                    const columns = row.split(',');
-                    const title = columns[0] || '';
-                    const url = columns[1] || '';
-                    const icon = columns[2] || '';
-
-                    if (title && url) { // Create button only if title and url exist
-                        const linkButton = document.createElement('a');
-                        linkButton.href = url.trim();
-                        linkButton.target = '_blank';
-                        linkButton.className = 'block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift';
-                        
-                        // Add icon if it exists
-                        linkButton.innerHTML = `${icon.trim()} ${title.trim()}`.trim();
-
-                        linksContainer.appendChild(linkButton);
-                    }
-                });
-
-            } catch (error) {
-                console.error('Error loading links:', error);
-                linksContainer.innerHTML = '<p class="text-white/80 text-center">เกิดข้อผิดพลาดในการโหลดลิงก์</p>';
-            }
-        }
-
-        // Run the function when the page is ready
-        document.addEventListener('DOMContentLoaded', loadLinks);
-    </script>
 
 </body>
 </html>
