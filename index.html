@@ -1,21 +1,21 @@
 <!DOCTYPE html>
+<!-- Chosen Palette: Calm Blue & Purple Gradient -->
+<!-- Application Structure Plan: The structure is a simple, single-column "link-in-bio" page. The information architecture is linear and task-oriented, presenting a list of direct links to external resources. This structure was chosen for its universal familiarity and efficiency, allowing users (students/staff) to quickly find and access specific services without navigational complexity. The user flow is direct: land on the page, identify the required service from the list, and click to navigate away. -->
+<!-- Visualization & Content Choices: Report Info: A list of services and their URLs. -> Goal: Inform & Navigate. -> Viz/Presentation Method: A vertical list of styled buttons (HTML <a> tags with Tailwind CSS), each with an icon (Unicode) and a text label. -> Interaction: Simple click-to-navigate with hover effects for visual feedback. -> Justification: This method is the most direct and user-friendly for a list of links, presenting options clearly and aiding recognition with icons. -> Library/Method: HTML, Tailwind CSS. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@dssd.wu - Links</title>
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Kanit) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* ใช้ฟอนต์ Kanit กับทุกส่วนของเว็บ */
         body {
             font-family: 'Kanit', sans-serif;
         }
-        /* เอฟเฟกต์ตอนเอาเมาส์ชี้ปุ่ม */
         .hover-lift {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
@@ -29,9 +29,7 @@
 
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
 
-        <!-- ส่วนโปรไฟล์ -->
         <div class="w-full max-w-md text-center">
-            <!-- โลโก้ -->
             <img 
                 src="https://dssd.wu.ac.th/wp-content/uploads/2025/07/474646448_122166056066301431_8332883749110873460_n.jpg" 
                 alt="โลโก้ส่วนส่งเสริมและพัฒนานักศึกษา" 
@@ -39,13 +37,11 @@
                 onerror="this.onerror=null;this.src='https://placehold.co/120x120/FFFFFF/333333?text=Logo';"
             >
             
-            <!-- ชื่อโปรไฟล์ -->
             <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mt-4 mb-8">
                 @dssd.wu
             </h1>
         </div>
 
-        <!-- ส่วนของลิงก์ -->
         <div class="w-full max-w-md">
             
             <a href="https://dssd.wu.ac.th/" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
@@ -63,26 +59,33 @@
             <a href="https://forms.gle/t7bKx6fHqwMeyGzC8" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
                 📦 แจ้งพบสิ่งของ
             </a>
-            
-            <a href="https://forms.gle/A6551a1cLMcz6u2u6" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
-                📦 ขอหนังสือรับรองความประพฤติ 
-            </a>            
 
             <a href="https://forms.gle/hhVp1gmkQPnuBYQx5" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
                 🗓️ จองห้องประชุมอาคารติวเตอร์
+            </a>
+
+            <a href="https://forms.gle/A6551a1cLMcz6u2u6" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                📄 ขอหนังสือรับรองความประพฤติ
+            </a>
+
+            <a href="http://bit.ly/4kF4k42" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
+                ⭐ ประเมินความพึงพอใจในการรับบริการ
             </a>
 
             <a href="https://www.facebook.com/groups/wu.volunteer.center" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
                 ❤️ ศูนย์จิตอาสา มวล.
             </a>
 
-            <a href="https://www.facebook.com/groups/442671105761880" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 rounded-lg text-center shadow-md hover-lift">
+            <a href="https://www.facebook.com/groups/442671105761880" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 mb-4 rounded-lg text-center shadow-md hover-lift">
                 🎓 กลุ่ม กยศ.วลัยลักษณ์
+            </a>
+
+            <a href="https://forms.gle/nGzovpdqyXPUhMsUA" target="_blank" class="block bg-white text-gray-800 font-bold w-full p-4 rounded-lg text-center shadow-md hover-lift">
+                ✉️ สายตรงอาจารย์โก้
             </a>
 
         </div>
 
-        <!-- ส่วนท้าย -->
         <footer class="mt-12 text-center">
             <p class="text-gray-700/80 text-sm font-semibold">Caring & Support Your Success</p>
         </footer>
